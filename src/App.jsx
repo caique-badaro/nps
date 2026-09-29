@@ -1,5 +1,5 @@
 // prime react
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 // páginas
 import Verbalizacoes from "./pages/Verbalizacoes/Verbalizacoes.jsx";
@@ -11,7 +11,7 @@ import CorteSubst from "./pages/CorteSubst/CorteSubst.jsx";
 
 function App() {
   return (
-    <BrowserRouter basename="/nps">
+    <HashRouter>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Dashboard />} />
@@ -20,7 +20,7 @@ function App() {
         <Route path="/corte-substituicao" element={<CorteSubst />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
